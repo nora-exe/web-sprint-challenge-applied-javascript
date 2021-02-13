@@ -57,6 +57,7 @@ const Card = (article) => {
 }
 
 // TASK 6 - Create a card from each and every article object in the response, using the Card component.
+// ******* this doesn't work because the node topic is node.js and the node category is node. Do not have time to fix ********
 
 const cardAppender = (selector) => {
 
@@ -70,7 +71,7 @@ const cardAppender = (selector) => {
       res2.data.topics.forEach(topic => {
         res.data.articles[topic].forEach(item => {
           document.querySelector(selector).appendChild(Card(item)); // Append each card to the selector passed to the function
-        })
+        })        
       })
     })
     .catch(err => {
